@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { shuffle } from 'lodash';
 
 function useShuffledAnswers(array: string[]): string[] {
-  return shuffle(array);
+
+  const shuffledAnswers = useMemo(() => shuffle(array), [array])
+  return shuffledAnswers
 }
 
 export default useShuffledAnswers;
