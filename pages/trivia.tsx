@@ -57,14 +57,14 @@ const Trivia: React.FC = () => {
 
     await sleep(1500)
 
-    setShouldShowResults(false)
-    getNextQuestion()
-
-    if (!questions.length) {
+    if (questions.length - 1 === 0) {
       router.push({
         pathname: '/celebration',
         query: { points: String(points.points) },
       });
+    } else {
+      setShouldShowResults(false)
+      getNextQuestion()
     }
   }
 
