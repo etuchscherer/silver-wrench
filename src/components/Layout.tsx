@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 import styles from '../../styles/Home.module.css'
+import Navbar from "./Navbar";
 
 interface Props {
   children: ReactNode
@@ -16,6 +17,7 @@ function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Navbar />
         <div className="flex items-center justify-center h-screen">
           {children}
         </div>

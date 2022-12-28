@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   return (
-    <Link href="/trivia">Play Trivia</Link>
+    <div className=''>
+      <Image src='/falcon.png' width={968} height={968} alt="falcon" />
+      <Link className='text-3xl text-green-500 font-bold' href="/trivia">Play Trivia</Link>
+    </div>
   )
 }
